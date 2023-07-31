@@ -11,7 +11,46 @@ FONT_NAME = "Courier"
 
 # Logic for generating password
 def generate_password():
-    pass
+    # Clearing the password field
+    password_field.delete(1, 99999999)
+
+    # Collection of letters, numbers and symbols that are used to generate password
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+               'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+               'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+    # Getting no. of letters, symbols and numbers from spinboxes
+    nr_letters = int(letter_input.get())
+    nr_symbols = int(symbols_input.get())
+    nr_numbers = int(number_input.get())
+
+    # Initialising an empty password array
+    password = []
+
+    # Adding letters, symbols and numbers to the password array
+    for letter in range(nr_letters):
+        password += random.choice(letters)
+
+    for symbol in range(nr_symbols):
+        password += random.choice(symbols)
+
+    for letter in range(nr_numbers):
+        password += random.choice(numbers)
+
+    # Randomly shuffling the password array to make the password scrambled
+    random.shuffle(password)
+
+    # Initialise an empty password string
+    new_pass = ""
+
+    # Add all characters from password array to the password string
+    for char in password:
+        new_pass += char
+
+    # Set the value of Password Field to the Generated Password
+    password_field.insert(index=0, string=new_pass)
 
 
 # GUI using tkinter
