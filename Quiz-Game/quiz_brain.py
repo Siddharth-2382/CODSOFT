@@ -20,11 +20,17 @@ class QuizBrain:
         self.question_number += 1
         # Format the data and unescape html formats
         q_text = html.unescape(self.current_question.text)
-        return f"Q.{self.question_number}: {q_text}"
+        q_options = self.current_question.options
+        unescaped_options = []
+        for option in q_options:
+            unescaped_options.append(html.unescape(option))
+
+        return {"question": f"Q.{self.question_number}: {q_text}",
+                "options": unescaped_options}
 
     # Check if the answer selected by user is correct
     def check_answer(self, user_answer):
-        correct_answer = self.current_question.answer
+        correct_answer = html.unescape(self.current_question.answer)
         if user_answer.lower() == correct_answer.lower():
             self.score += 1
             return True
