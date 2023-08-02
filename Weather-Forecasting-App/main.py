@@ -16,14 +16,19 @@ def get_weather_data(city):
         "appid": API_key,
     }
     response = requests.get(url=OWM_endpoint, params=weather_params)
-    response.raise_for_status()
+    response_status = response.status_code
     weather_data = response.json()
 
-    data = {
-        "weather_description": weather_data['weather'][0]['description'],
-        "temperature": weather_data['main']['temp'],
-        "humidity": weather_data['main']['humidity'],
-        "wind_speed": weather_data['wind']['speed'],
-    }
+    if response_status == 200:
+        data = {
+            "description": weather_data['weather'][0]['description'],
+            "temperature": weather_data['main']['temp'],
+            "humidity": weather_data['main']['humidity'],
+            "windspeed": weather_data['wind']['speed'],
+        }
+    else:
+        data = {
+            "description": "Invalid City Name"
+        }
 
     return data
