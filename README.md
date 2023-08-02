@@ -19,6 +19,9 @@ Below is the list of tasks I have completed as part of this internship:
 2. Task 2: [Quiz Game](https://github.com/Siddharth-2382/CODSOFT/tree/main/Quiz-Game)
    - The Quiz Game App is an interactive desktop application developed using Tkinter. This engaging app allows users to test their knowledge across various topics through a series of multiple-choice questions.
 
+3. Task 3: [Weather Forecaster](https://github.com/Siddharth-2382/CODSOFT/tree/main/Weather-Forecasting-App)
+   - The Weather Forecasting App is a dynamic desktop application developed using Tkinter and the OpenWeatherMap API, which provides real-time weather data. This app allows users to check the current weather conditions and the forecast for any location worldwide.
+
 ## Thanking CodSoft
 I would like to extend my sincere thanks and gratitude to the entire CodSoft team for providing me with this incredible opportunity to be a part of their internship program. The experience gained during this internship has been invaluable, and I am grateful for the guidance, mentorship, and support I received from CodSoft's team.
 
