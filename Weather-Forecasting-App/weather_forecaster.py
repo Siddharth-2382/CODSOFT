@@ -1,4 +1,5 @@
 from tkinter import *
+from main import get_weather_data
 
 # Constant for theme color of Weather Forecasting App
 THEME_COLOR = "#d6f1ff"
@@ -6,7 +7,15 @@ FONT_NAME = "Courier"
 
 
 def forecast():
-    pass
+    city = city_name_entry.get()
+    if city == "":
+        pass
+    else:
+        data = get_weather_data(city)
+        description_display.config(text=data["weather_description"])
+        temperature_display.config(text=f"{data['temperature']}°C")
+        windspeed_display.config(text=f"{data['wind_speed']}m/s")
+        humidity_display.config(text=f"{data['humidity']}%")
 
 
 window = Tk()
@@ -44,7 +53,7 @@ temperature_label.place(x=10, y=275)
 
 # Label for displaying temperature
 temperature_display = Label(text="", bg=THEME_COLOR, fg="#db886a", font=(FONT_NAME, 20))
-temperature_display.place(x=35, y=375)
+temperature_display.place(x=15, y=375)
 
 # Label for windspeed
 windspeed_img = PhotoImage(file="images/windspeed.png")
@@ -53,7 +62,7 @@ windspeed_label.place(x=220, y=275)
 
 # Label for displaying windspeed
 windspeed_display = Label(text="", bg=THEME_COLOR, fg="#db886a", font=(FONT_NAME, 20))
-windspeed_display.place(x=255, y=375)
+windspeed_display.place(x=235, y=375)
 
 # Label for humidity
 humidity_img = PhotoImage(file="images/humidity.png")
@@ -62,7 +71,7 @@ humidity_label.place(x=430, y=275)
 
 # Label for displaying humidity
 humidity_display = Label(text="", bg=THEME_COLOR, fg="#db886a", font=(FONT_NAME, 20))
-humidity_display.place(x=465, y=375)
+humidity_display.place(x=460, y=375)
 
 # Window configuration
 window.geometry("+450+125")
