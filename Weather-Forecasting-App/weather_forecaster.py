@@ -12,10 +12,13 @@ def forecast():
         pass
     else:
         data = get_weather_data(city)
-        description_display.config(text=data["weather_description"])
-        temperature_display.config(text=f"{data['temperature']}°C")
-        windspeed_display.config(text=f"{data['wind_speed']}m/s")
-        humidity_display.config(text=f"{data['humidity']}%")
+        description_display.config(text=data["description"])
+        if data.get('temperature'):
+            temperature_display.config(text=f"{data['temperature']}°C")
+        if data.get('windspeed'):
+            windspeed_display.config(text=f"{data['windspeed']}m/s")
+        if data.get('humidity'):
+            humidity_display.config(text=f"{data['humidity']}%")
 
 
 window = Tk()
