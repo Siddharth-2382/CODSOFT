@@ -15,16 +15,21 @@ def clear():
 
 
 def evaluate():
-    input_expression = input_entry.get()
-    output = eval(input_expression)
-    input_entry.delete(0, END)
-    input_entry.insert(0, f"{output:.2f}")
+    try:
+        input_expression = input_entry.get()
+        output = eval(input_expression)
+        input_entry.delete(0, END)
+        input_entry.insert(0, f"{output:.2f}")
+    except (SyntaxError, ZeroDivisionError):
+        input_entry.delete(0, END)
+        input_entry.insert(0, "BAD EXPRESSION")
 
 
 window = Tk()
 
 # Entry field for input
 input_entry = Entry(font=(FONT_NAME, 25))
+input_entry.focus_set()
 input_entry.grid(row=0, column=0, columnspan=4, pady=5, padx=5)
 
 # Buttons for numbers
