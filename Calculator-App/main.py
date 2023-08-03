@@ -25,6 +25,11 @@ def evaluate():
         input_entry.insert(0, "BAD EXPRESSION")
 
 
+# Function to handle "Enter" key press event
+def evaluate_on_enter(event):
+    evaluate()
+
+
 window = Tk()
 
 # Entry field for input
@@ -84,6 +89,9 @@ equal.grid(row=4, column=2)
 
 point = Button(text=".", height=1, width=2, font=(FONT_NAME, 25), command=lambda: press("."))
 point.grid(row=4, column=1)
+
+# Event listener for "Enter" key to evaluate expression in input field
+window.bind("<Return>", evaluate_on_enter)
 
 # Window configuration
 window.title("Calculator")
