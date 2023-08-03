@@ -22,6 +22,9 @@ Below is the list of tasks I have completed as part of this internship:
 3. Task 3: [Weather Forecaster](https://github.com/Siddharth-2382/CODSOFT/tree/main/Weather-Forecasting-App)
    - The Weather Forecasting App is a dynamic desktop application developed using Tkinter and the OpenWeatherMap API, which provides real-time weather data. This app allows users to check the current weather conditions and the forecast for any location worldwide.
 
+4. Task 4: [Calculator](https://github.com/Siddharth-2382/CODSOFT/tree/main/Calculator-App)
+   - The Calculator App is a versatile desktop application developed using Tkinter, a Python library for creating graphical user interfaces. This efficient app provides users with a convenient tool to perform basic arithmetic calculations quickly and accurately.
+
 ## Thanking CodSoft
 I would like to extend my sincere thanks and gratitude to the entire CodSoft team for providing me with this incredible opportunity to be a part of their internship program. The experience gained during this internship has been invaluable, and I am grateful for the guidance, mentorship, and support I received from CodSoft's team.
 
