@@ -15,7 +15,10 @@ def clear():
 
 
 def evaluate():
-    pass
+    input_expression = input_entry.get()
+    output = eval(input_expression)
+    input_entry.delete(0, END)
+    input_entry.insert(0, f"{output:.2f}")
 
 
 window = Tk()
