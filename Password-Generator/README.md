@@ -14,19 +14,21 @@ This is a simple password generator application built using Tkinter in Python. I
 
 ## How to Use
 
-1. Clone the repository or download the source code.
-        
-        git clone https://github.com/Siddharth-2382/CODSOFT.git
-2. Install Tkinter if you haven't already (chances are, it's already installed).
+1. Clone the repository or download the source code and move to `Password-Generator` directory.
 
-      pip install tk
-3. Run the password_generator.py script.
+       git clone https://github.com/Siddharth-2382/CODSOFT.git
+       cd CODSOFT
+       cd Password-Generator
+3. Install Tkinter if you haven't already (chances are, it's already installed).
 
-      python password_generator.py
-4. The application window will open, allowing you to customize the password generation options.
-5. Enter the desired number of `letters`, `symbols`, and `numbers` in the provided entry fields.
-6. Click the `Generate` button to create the password.
-7. The generated password will be displayed on the screen.
+       pip install tk
+4. Run the password_generator.py script.
+
+       python password_generator.py
+5. The application window will open, allowing you to customize the password generation options.
+6. Enter the desired number of `letters`, `symbols`, and `numbers` in the provided entry fields.
+7. Click the `Generate` button to create the password.
+8. The generated password will be displayed on the screen.
 
 ## Acknowledgments
 
