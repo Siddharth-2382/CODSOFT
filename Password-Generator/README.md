@@ -22,9 +22,9 @@ This is a simple password generator application built using Tkinter in Python. I
 3. Install Tkinter if you haven't already (chances are, it's already installed).
 
        pip install tk
-4. Run the password_generator.py script.
+4. Run the `main.py` script.
 
-       python password_generator.py
+       python main.py
 5. The application window will open, allowing you to customize the password generation options.
 6. Enter the desired number of `letters`, `symbols`, and `numbers` in the provided entry fields.
 7. Click the `Generate` button to create the password.
