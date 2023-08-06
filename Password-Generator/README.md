@@ -19,6 +19,9 @@ This is a simple password generator application built using Tkinter in Python. I
        git clone https://github.com/Siddharth-2382/CODSOFT.git
        cd CODSOFT
        cd Password-Generator
+
+2. Ensure you have Python 3.x installed on your system.
+
 3. Install Tkinter if you haven't already (chances are, it's already installed).
 
        pip install tk
